@@ -10,12 +10,19 @@ export default {
     portfolio: 'Portfolio',
     portfolioList: 'Portfolio List',
     portfolioDetails: 'Portfolio Details',
-    contact: 'Contact'
+    contact: 'Contact',
+    about: 'About',
+    blog: 'Blog',
+    services: 'Services'
+  },
+  language: {
+    zh: '中文',
+    en: 'English'
   },
   home: {
     hero: {
       hey: "Hey, I'm",
-      name: 'Designer',
+      name: 'aren',
       description: 'A passionate designer and developer focused on creating beautiful and functional digital products. 5+ years of industry experience in turning ideas into reality.',
       roles: {
         designer: 'UI/UX Designer',

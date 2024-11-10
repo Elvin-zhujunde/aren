@@ -10,7 +10,14 @@ export default {
     portfolio: '作品集',
     portfolioList: '作品列表',
     portfolioDetails: '作品详情',
-    contact: '联系我'
+    contact: '联系我',
+    about: '关于',
+    blog: '博客',
+    services: '服务'
+  },
+  language: {
+    zh: '中文',
+    en: 'English'
   },
   home: {
     title: '首页',
@@ -26,7 +33,7 @@ export default {
     logout: '退出登录',
     hero: {
       hey: '你好，我是',
-      name: 'Designer',
+      name: '阿亻',
       description: '一位充满激情的设计师和开发者，专注于创造美观实用的数字产品。5年+的行业经验，擅长将创意转化为现实。',
       roles: {
         designer: 'UI/UX 设计师',

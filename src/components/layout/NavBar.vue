@@ -13,11 +13,11 @@
           v-model:value="currentLang"
           style="width: 100px"
           size="small"
-          bordered="false"
+          :bordered="false"
           @change="handleLangChange"
         >
-          <a-select-option value="zh-CN">中文</a-select-option>
-          <a-select-option value="en-US">English</a-select-option>
+          <a-select-option value="zh-CN">{{ t('language.zh') }}</a-select-option>
+          <a-select-option value="en-US">{{ t('language.en') }}</a-select-option>
         </a-select>
       </div>
     </div>
@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useLanguage } from '@/locales'
@@ -37,7 +37,7 @@ const { locale, changeLanguage } = useLanguage()
 const selectedKeys = ref(['home'])
 const currentLang = ref(locale.value)
 
-const menuItems = [
+const menuItems = computed(() => [
   {
     key: 'home',
     label: t('menu.home')
@@ -57,10 +57,22 @@ const menuItems = [
     ]
   },
   {
+    key: 'services',
+    label: t('menu.services')
+  },
+  {
+    key: 'blog',
+    label: t('menu.blog')
+  },
+  {
+    key: 'about',
+    label: t('menu.about')
+  },
+  {
     key: 'contact',
     label: t('menu.contact')
   }
-]
+])
 
 const handleMenuClick = ({ key }) => {
   router.push({ name: key })
