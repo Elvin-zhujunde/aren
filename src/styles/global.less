@@ -1,0 +1,42 @@
+@import './variables.less';
+
+// 重置样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 14px;
+  color: @text-color;
+  background-color: #f0f2f5;
+}
+
+// 常用flex类
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 常用间距类
+.m {
+  &t-1 { margin-top: 8px; }
+  &t-2 { margin-top: 16px; }
+  &t-3 { margin-top: 24px; }
+  &b-1 { margin-bottom: 8px; }
+  &b-2 { margin-bottom: 16px; }
+  &b-3 { margin-bottom: 24px; }
+} 
