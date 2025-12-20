@@ -16,7 +16,6 @@
           :bordered="false"
           @change="handleLangChange"
         >
-        
           <a-select-option value="zh-CN">{{ t('language.zh') }}</a-select-option>
           <a-select-option value="en-US">{{ t('language.en') }}</a-select-option>
         </a-select>
