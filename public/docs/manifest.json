@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Getting Started",
+    "path": "/docs/getting-started.md",
+    "parent": null
+  },
+  {
+    "name": "Installation",
+    "path": "/docs/installation.md",
+    "parent": "/docs/getting-started.md"
+  },
+  {
+    "name": "Quick Start",
+    "path": "/docs/quick-start.md",
+    "parent": "/docs/getting-started.md"
+  },
+  {
+    "name": "Configuration",
+    "path": "/docs/configuration.md",
+    "parent": null
+  }
+]
