@@ -56,7 +56,7 @@ import {
 } from '@ant-design/icons-vue'
 
 const { t } = useI18n()
-const roles = ['designer', 'developer', 'wordpress']
+const roles = ['designer', 'developer', 'AgentCLI']
 
 const socialLinks = [
   {

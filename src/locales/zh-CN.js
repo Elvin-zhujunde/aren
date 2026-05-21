@@ -38,7 +38,7 @@ export default {
       roles: {
         designer: 'UI/UX 设计师',
         developer: '应用开发者',
-        wordpress: 'WordPress 开发'
+        AgentCLI: 'AgentCLI 开发'
       },
       contact: '联系我',
       download: '下载简历',

@@ -1,22 +1,17 @@
 [
   {
-    "name": "Getting Started",
-    "path": "/docs/getting-started.md",
+    "name": "Gemini CLI 的 Prompt 工程架构",
+    "path": "/docs/Gemini CLI 的 Prompt 工程架构.md",
     "parent": null
   },
   {
-    "name": "Installation",
-    "path": "/docs/installation.md",
-    "parent": "/docs/getting-started.md"
+    "name": "Claude Code 架构工程结构",
+    "path": "/docs/Claude Code 架构工程结构.md",
+    "parent": null
   },
   {
-    "name": "Quick Start",
-    "path": "/docs/quick-start.md",
-    "parent": "/docs/getting-started.md"
-  },
-  {
-    "name": "Configuration",
-    "path": "/docs/configuration.md",
+    "name": "ClaudeCode 执行链路分析",
+    "path": "/docs/ClaudeCode 执行链路分析.md",
     "parent": null
   }
 ]

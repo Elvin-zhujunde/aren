@@ -43,36 +43,36 @@ const menuItems = computed(() => [
     key: 'home',
     label: t('menu.home')
   },
-  {
-    key: 'portfolio',
-    label: t('menu.portfolio'),
-    children: [
-      {
-        key: 'portfolio-list',
-        label: t('menu.portfolioList')
-      },
-      {
-        key: 'portfolio-details',
-        label: t('menu.portfolioDetails')
-      }
-    ]
-  },
-  {
-    key: 'services',
-    label: t('menu.services')
-  },
+  // {
+  //   key: 'portfolio',
+  //   label: t('menu.portfolio'),
+  //   children: [
+  //     {
+  //       key: 'portfolio-list',
+  //       label: t('menu.portfolioList')
+  //     },
+  //     {
+  //       key: 'portfolio-details',
+  //       label: t('menu.portfolioDetails')
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'services',
+  //   label: t('menu.services')
+  // },
   {
     key: 'blog',
     label: t('menu.blog')
   },
-  {
-    key: 'about',
-    label: t('menu.about')
-  },
-  {
-    key: 'contact',
-    label: t('menu.contact')
-  }
+  // {
+  //   key: 'about',
+  //   label: t('menu.about')
+  // },
+  // {
+  //   key: 'contact',
+  //   label: t('menu.contact')
+  // }
 ])
 
 const handleMenuClick = ({ key }) => {

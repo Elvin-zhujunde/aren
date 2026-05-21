@@ -27,7 +27,7 @@ export default {
       roles: {
         designer: 'UI/UX Designer',
         developer: 'App Developer',
-        wordpress: 'WordPress Developer'
+        AgentCLI: 'AgentCLI Developer'
       },
       contact: 'Contact Me',
       download: 'Download CV',
