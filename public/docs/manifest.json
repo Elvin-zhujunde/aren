@@ -1,7 +1,12 @@
 [
   {
-    "name": "Gemini CLI 的 Prompt 工程架构",
-    "path": "/docs/Gemini CLI 的 Prompt 工程架构.md",
+    "name": "CC 架构说明：REPL 与终端数据展示链路",
+    "path": "/docs/CC 架构说明：REPL 与终端数据展示链路.md",
+    "parent": null
+  },
+  {
+    "name": "ccb多模态改进",
+    "path": "/docs/ccb多模态改进.md",
     "parent": null
   },
   {
@@ -12,6 +17,16 @@
   {
     "name": "ClaudeCode 执行链路分析",
     "path": "/docs/ClaudeCode 执行链路分析.md",
+    "parent": null
+  },
+  {
+    "name": "Gemini CLI 的 Prompt 工程架构",
+    "path": "/docs/Gemini CLI 的 Prompt 工程架构.md",
+    "parent": null
+  },
+  {
+    "name": "TOKEN_USAGE_ANALYSIS",
+    "path": "/docs/TOKEN_USAGE_ANALYSIS.md",
     "parent": null
   }
 ]

@@ -1,5 +1,9 @@
 <script setup>
-import NavBar from '@/components/layout/NavBar.vue'
+import NavBar from "@/components/layout/NavBar.vue";
+fetch("http://0.0.0.0:3000/log", {
+  method: "POST",
+  body: "你的日志内容1",
+});
 </script>
 
 <template>
