@@ -1,8 +1,8 @@
-# CodeAgent Token 计算链路分析
+# ClaudeCode Token 计算链路分析
 
 ## 1. 结论摘要
 
-CodeAgent 的主要 token 数据来自模型接口返回的 `usage` 字段，而不是完全依赖本地计算。本地 token 估算主要用于两个场景：接口 usage 不存在时的兜底估算，以及最后一次 API 响应之后又追加了 tool_result、attachment 等消息时，对新增消息进行粗略估算。
+ClaudeCode 的主要 token 数据来自模型接口返回的 `usage` 字段，而不是完全依赖本地计算。本地 token 估算主要用于两个场景：接口 usage 不存在时的兜底估算，以及最后一次 API 响应之后又追加了 tool_result、attachment 等消息时，对新增消息进行粗略估算。
 
 `/status` 命令本身不展示 token 用量。它打开 Settings 的 Status 标签页，展示版本、账号、模型、API provider、IDE、MCP、Sandbox 和系统诊断。与 token 相关的界面主要在 footer verbose 文本、statusline hook 输入、spinner token budget 文本、TokenWarning 上下文告警和成本统计中。
 

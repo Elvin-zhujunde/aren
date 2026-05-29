@@ -25,9 +25,9 @@ export default {
       name: 'aren',
       description: 'A passionate designer and developer focused on creating beautiful and functional digital products. 5+ years of industry experience in turning ideas into reality.',
       roles: {
-        designer: 'UI/UX Designer',
+        designer: 'Web Application Designer',
         developer: 'App Developer',
-        AgentCLI: 'AgentCLI Developer'
+        Harness: 'Harness Developer'
       },
       contact: 'Contact Me',
       download: 'Download CV',

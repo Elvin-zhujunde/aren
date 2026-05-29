@@ -56,7 +56,7 @@ import {
 } from '@ant-design/icons-vue'
 
 const { t } = useI18n()
-const roles = ['designer', 'developer', 'AgentCLI']
+const roles = ['designer', 'developer', 'Harness']
 
 const socialLinks = [
   {
@@ -88,11 +88,11 @@ const socialLinks = [
 const stats = [
   {
     key: 'experience',
-    number: '5'
+    number: '3'
   },
   {
     key: 'projects',
-    number: '50'
+    number: '20'
   },
   {
     key: 'clients',

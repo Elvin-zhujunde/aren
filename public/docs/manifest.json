@@ -1,5 +1,10 @@
 [
   {
+    "name": "20260525",
+    "path": "/docs/20260525.md",
+    "parent": null
+  },
+  {
     "name": "CC 架构说明：REPL 与终端数据展示链路",
     "path": "/docs/CC 架构说明：REPL 与终端数据展示链路.md",
     "parent": null
@@ -15,18 +20,33 @@
     "parent": null
   },
   {
+    "name": "ClaudeCode Token 计算链路分析",
+    "path": "/docs/ClaudeCode Token 计算链路分析.md",
+    "parent": null
+  },
+  {
+    "name": "ClaudeCode 压缩机制用户小册",
+    "path": "/docs/ClaudeCode 压缩机制用户小册.md",
+    "parent": null
+  },
+  {
     "name": "ClaudeCode 执行链路分析",
     "path": "/docs/ClaudeCode 执行链路分析.md",
     "parent": null
   },
   {
-    "name": "Gemini CLI 的 Prompt 工程架构",
-    "path": "/docs/Gemini CLI 的 Prompt 工程架构.md",
+    "name": "ClaudeCode压缩机制分析",
+    "path": "/docs/ClaudeCode压缩机制分析.md",
     "parent": null
   },
   {
-    "name": "TOKEN_USAGE_ANALYSIS",
-    "path": "/docs/TOKEN_USAGE_ANALYSIS.md",
+    "name": "ClaudeCode架构分层与核心目录源码分析",
+    "path": "/docs/ClaudeCode架构分层与核心目录源码分析.md",
+    "parent": null
+  },
+  {
+    "name": "Gemini CLI 的 Prompt 工程架构",
+    "path": "/docs/Gemini CLI 的 Prompt 工程架构.md",
     "parent": null
   }
 ]

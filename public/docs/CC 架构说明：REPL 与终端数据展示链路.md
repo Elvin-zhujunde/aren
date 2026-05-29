@@ -1,4 +1,4 @@
-# CodeAgent 架构说明：REPL 与终端数据展示链路
+# ClaudeCode 架构说明：REPL 与终端数据展示链路
 
 ## 结论
 

@@ -36,9 +36,9 @@ export default {
       name: '阿亻',
       description: '一位充满激情的设计师和开发者，专注于创造美观实用的数字产品。5年+的行业经验，擅长将创意转化为现实。',
       roles: {
-        designer: 'UI/UX 设计师',
+        designer: 'Web应用开发',
         developer: '应用开发者',
-        AgentCLI: 'AgentCLI 开发'
+        Harness: 'Harness 开发'
       },
       contact: '联系我',
       download: '下载简历',
