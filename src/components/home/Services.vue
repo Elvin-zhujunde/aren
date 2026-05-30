@@ -1,47 +1,32 @@
 <template>
-  <div class="services-section">
-    <div class="section-header">
-      <h2>{{ t('home.services.title') }}</h2>
-      <p>{{ t('home.services.subtitle') }}</p>
-    </div>
-    <div class="services-grid">
-      <a-row :gutter="[32, 32]">
-        <a-col v-for="service in services" :key="service.key" :xs="24" :sm="12" :md="8">
-          <div 
-            class="service-card"
-            :data-aos="service.animation"
-            :data-aos-delay="service.delay"
-          >
-            <div class="service-icon-wrapper">
-              <div class="service-icon" :style="{ backgroundColor: service.color }">
-                <component :is="service.icon" />
-              </div>
-              <div class="service-icon-bg" :style="{ backgroundColor: service.color }"></div>
+  <section class="services-section">
+    <div class="home-section-shell">
+      <div class="home-section-heading section-heading-centered">
+        <h2>{{ t('home.services.title') }}</h2>
+        <p>{{ t('home.services.subtitle') }}</p>
+      </div>
+
+      <div class="services-grid">
+        <article v-for="service in services" :key="service.key" class="service-card">
+          <div class="service-head">
+            <div class="service-icon">
+              <component :is="service.icon" />
             </div>
             <h3>{{ t(`home.services.items.${service.key}.title`) }}</h3>
-            <p>{{ t(`home.services.items.${service.key}.description`) }}</p>
-            <ul class="service-features">
-              <li v-for="(feature, index) in service.features" :key="index">
-                <CheckOutlined class="feature-icon" />
-                {{ t(`home.services.items.${service.key}.features.${feature}`) }}
-              </li>
-            </ul>
-            <a-button type="link" class="learn-more">
-              {{ t('home.services.learnMore') }}
-              <RightOutlined />
-            </a-button>
           </div>
-        </a-col>
-      </a-row>
+
+          <p>{{ t(`home.services.items.${service.key}.description`) }}</p>
+
+          <ul class="service-features">
+            <li v-for="feature in service.features" :key="feature">
+              <CheckOutlined />
+              <span>{{ t(`home.services.items.${service.key}.features.${feature}`) }}</span>
+            </li>
+          </ul>
+        </article>
+      </div>
     </div>
-    <div class="services-cta">
-      <h3>{{ t('home.services.cta.title') }}</h3>
-      <p>{{ t('home.services.cta.description') }}</p>
-      <a-button type="primary" size="large" shape="round">
-        {{ t('home.services.cta.button') }}
-      </a-button>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -50,8 +35,7 @@ import {
   CodeOutlined,
   LayoutOutlined,
   MobileOutlined,
-  CheckOutlined,
-  RightOutlined
+  CheckOutlined
 } from '@ant-design/icons-vue'
 
 const { t } = useI18n()
@@ -60,181 +44,128 @@ const services = [
   {
     key: 'design',
     icon: LayoutOutlined,
-    color: '#1890ff',
-    features: ['responsive', 'userCentric', 'modern'],
-    animation: 'fade-up',
-    delay: '0'
+    features: ['responsive', 'userCentric', 'modern']
   },
   {
     key: 'development',
     icon: CodeOutlined,
-    color: '#52c41a',
-    features: ['performance', 'scalable', 'secure'],
-    animation: 'fade-up',
-    delay: '200'
+    features: ['performance', 'scalable', 'secure']
   },
   {
     key: 'mobile',
     icon: MobileOutlined,
-    color: '#722ed1',
-    features: ['native', 'crossPlatform', 'offline'],
-    animation: 'fade-up',
-    delay: '400'
+    features: ['native', 'crossPlatform', 'offline']
   }
 ]
 </script>
 
 <style scoped>
 .services-section {
-  padding: 100px 50px;
-  background: #f8f9fa;
-  overflow: hidden;
+  padding: clamp(72px, 8vw, 112px) 0;
+  background: #fff;
 }
 
-.section-header {
+.section-heading-centered {
+  margin-inline: auto;
   text-align: center;
-  margin-bottom: 60px;
 }
 
-.section-header h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
-  font-weight: bold;
-}
-
-.section-header p {
-  font-size: 18px;
-  color: #666;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .service-card {
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  border: 1px solid @home-border;
+  border-radius: 24px;
+  padding: 28px;
+  background: @home-bg;
+  transition: border-color 0.24s @home-ease, transform 0.24s @home-ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  border-color: rgba(24, 144, 255, 0.34);
+  transform: translateY(-3px);
 }
 
-.service-icon-wrapper {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 30px;
+.service-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
 .service-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
+  width: 48px;
+  height: 48px;
+  flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 2;
-}
-
-.service-icon-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   border-radius: 16px;
-  top: 8px;
-  left: 8px;
-  opacity: 0.2;
-  transition: all 0.3s ease;
-}
-
-.service-card:hover .service-icon-bg {
-  transform: translate(-4px, -4px);
+  background: @home-brand-soft;
+  color: @home-brand-dark;
 }
 
 .service-icon :deep(svg) {
-  font-size: 32px;
-  color: #fff;
+  font-size: 22px;
 }
 
 .service-card h3 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
+  margin: 0;
+  color: @home-ink;
+  font-size: 22px;
+  line-height: 1.2;
 }
 
 .service-card p {
-  color: #666;
-  margin-bottom: 24px;
-  line-height: 1.6;
+  margin: 0 0 22px;
+  color: @home-muted;
+  line-height: 1.7;
 }
 
 .service-features {
-  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: auto 0 0;
   padding: 0;
-  margin: 0 0 24px;
+  list-style: none;
 }
 
 .service-features li {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
-  color: #666;
+  gap: 9px;
+  color: @home-ink-soft;
+  font-weight: 650;
 }
 
-.feature-icon {
-  color: #52c41a;
-  margin-right: 8px;
+.service-features :deep(svg) {
+  flex: none;
+  color: @home-brand;
 }
 
-.learn-more {
-  padding: 0;
-  height: auto;
-  font-weight: 500;
+@media (max-width: 980px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: 0;
+  }
 }
 
-.learn-more :deep(svg) {
-  transition: transform 0.3s ease;
-}
-
-.learn-more:hover :deep(svg) {
-  transform: translateX(4px);
-}
-
-.services-cta {
-  text-align: center;
-  margin-top: 80px;
-  padding: 60px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.services-cta h3 {
-  font-size: 28px;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.services-cta p {
-  color: #666;
-  margin-bottom: 32px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .services-section {
-    padding: 60px 20px;
+    padding: 64px 0;
   }
-  
-  .services-cta {
-    padding: 40px 20px;
-    margin-top: 60px;
+
+  .service-card {
+    padding: 22px;
   }
 }
-</style> 
+</style>

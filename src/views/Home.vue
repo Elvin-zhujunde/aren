@@ -3,7 +3,6 @@
     <hero />
     <works />
     <services />
-    <skills />
     <contact />
   </div>
 </template>

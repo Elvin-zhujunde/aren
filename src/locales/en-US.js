@@ -82,16 +82,37 @@ export default {
       items: {
         design: {
           title: 'UI/UX Design',
-          description: 'Create intuitive interfaces with excellent user experience'
+          description: 'Create intuitive interfaces with excellent user experience',
+          features: {
+            responsive: 'Responsive design',
+            userCentric: 'User-centered flows',
+            modern: 'Modern interface systems'
+          }
         },
         development: {
           title: 'Web Development',
-          description: 'Build high-performance, scalable web applications'
+          description: 'Build high-performance, scalable web applications',
+          features: {
+            performance: 'Performance tuning',
+            scalable: 'Scalable architecture',
+            secure: 'Secure foundations'
+          }
         },
         mobile: {
           title: 'Mobile Development',
-          description: 'Develop smooth, responsive mobile applications'
+          description: 'Develop smooth, responsive mobile applications',
+          features: {
+            native: 'Native-feeling UX',
+            crossPlatform: 'Cross-platform delivery',
+            offline: 'Offline-ready features'
+          }
         }
+      },
+      learnMore: 'View service',
+      cta: {
+        title: 'Have a project that needs sharper execution?',
+        description: 'Send the brief, product goal, or rough idea. I will help turn it into a clear interface, build plan, and working release.',
+        button: 'Start a project'
       }
     },
     skills: {
